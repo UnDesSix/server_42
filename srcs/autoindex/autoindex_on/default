@@ -1,0 +1,29 @@
+server {
+	listen 80;
+	listen [::]:80;
+	server_name ftserver;
+	return 301 https://$host$request_uri;
+}
+
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	server_name ftserver;
+	
+	ssl_certificate     /localhost.pem;
+	ssl_certificate_key /localhost-key.pem;
+
+	root /var/www/html;
+
+	index index.php;
+
+	location / {
+		autoindex on;
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+	}
+}
