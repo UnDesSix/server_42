@@ -1,8 +1,0 @@
-- Install Wordpress
-- (Opt) find a command to config word press language -> ASK LUCIE IF REQUIRED
-
-- Install and configure PhpMyAdmin
-
-- Make some research about SSL Protocol
-
-- Configure AutoIndex
