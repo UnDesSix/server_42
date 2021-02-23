@@ -8,3 +8,5 @@ The first one create an image, the second one run a container, the third one sto
 One you execute the script "run_container.sh" you will be in the the bash. From there you can execute from anywhere the commande autoindex_on or autoindex_off.
 
 Enjoy
+
+
